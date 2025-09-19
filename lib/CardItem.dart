@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'CardDetails.dart';
 
 class CardItem extends StatelessWidget{
 
@@ -11,6 +12,15 @@ class CardItem extends StatelessWidget{
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(18.0),
+        child: GestureDetector(
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => CardDetails(name: name, image: image),
+              ),
+            );
+          },
       child: Card(
         child: Column(
             children: [
@@ -26,14 +36,12 @@ class CardItem extends StatelessWidget{
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(name),
-
                     Icon(Icons.star, color: Colors.amber, size: 20,)
                   ],
                 ),
               )
-
             ]
-
+        ),
         ),
       ),
     );

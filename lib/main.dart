@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:g_store/CardItem.dart';
+import 'SignUp.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -23,6 +24,7 @@ void main() {
           CardItem(name: "The Abyss", image: "assets/images/abys.jpg"),
         ],
       ),
+      //Signup()
 
     )
   ));
